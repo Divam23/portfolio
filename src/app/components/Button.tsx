@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 const ResumeButton: React.FC = () => {
@@ -39,7 +40,6 @@ const ResumeButton: React.FC = () => {
         </svg>
       </div>
 
-      {/* Text */}
       <span
         className="
           ml-[0.35em]
@@ -78,8 +78,7 @@ const SocialButtons: React.FC = () => {
       ref={containerRef}
       className="relative w-50 h-25  flex items-center justify-between"
     >
-      {/* GitHub */}
-      <a
+      <Link
         href="https://github.com/Divam23"
         target="_blank"
         className={`
@@ -96,7 +95,6 @@ const SocialButtons: React.FC = () => {
           }
         `}
       >
-        {/* tooltip */}
         <span className="absolute -top-8 text-xs text-zinc-400 opacity-0 group-hover:opacity-100 transition">
           GitHub
         </span>
@@ -104,10 +102,8 @@ const SocialButtons: React.FC = () => {
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
           <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.66-.22.66-.48v-1.68c-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.92-.64.07-.63.07-.63 1.02.08 1.56 1.08 1.56 1.08.9 1.6 2.37 1.14 2.95.87.1-.68.35-1.14.64-1.4-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.38-2.03 1-2.75-.1-.26-.44-1.3.1-2.7 0 0 .82-.27 2.7 1.05A9.2 9.2 0 0112 6.8c.82 0 1.65.12 2.42.35 1.88-1.32 2.7-1.05 2.7-1.05.54 1.4.2 2.44.1 2.7.62.72 1 1.63 1 2.75 0 3.93-2.34 4.8-4.58 5.05.36.32.68.94.68 1.9v2.8c0 .26.16.58.67.48A10.26 10.26 0 0022 12.26C22 6.58 17.52 2 12 2z" />
         </svg>
-      </a>
-
-      {/* LinkedIn */}
-      <a
+      </Link>
+      <Link
         href="https://linkedin.com/in/divam-dubey"
         target="_blank"
         className={`
@@ -131,9 +127,8 @@ const SocialButtons: React.FC = () => {
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
           <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96v5.66H9.33V9h3.4v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.44v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
         </svg>
-      </a>
+      </Link>
 
-      {/* Center Button */}
       <button
         onClick={() => setOpen((prev) => !prev)}
         className={`
@@ -191,7 +186,6 @@ const CopyButton: React.FC<Props> = ({ textToCopy }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Tooltip */}
       <div
         className={`
           absolute -top-10 left-1/2 -translate-x-1/2
@@ -205,7 +199,6 @@ const CopyButton: React.FC<Props> = ({ textToCopy }) => {
         {copied ? "Copied!" : "Copy email"}
       </div>
 
-      {/* Button */}
       <button
         onClick={handleCopy}
         className="
@@ -221,7 +214,6 @@ const CopyButton: React.FC<Props> = ({ textToCopy }) => {
           transition-all duration-100
         "
       >
-        {/* inner surface */}
         <span
           className="
             absolute top-0.75 left-1 right-3 bottom-3.5
@@ -232,7 +224,6 @@ const CopyButton: React.FC<Props> = ({ textToCopy }) => {
           "
         />
 
-        {/* text */}
         <span
           className="
             absolute left-3 top-3
@@ -245,7 +236,6 @@ const CopyButton: React.FC<Props> = ({ textToCopy }) => {
         </span>
       </button>
 
-      {/* audio */}
       <audio ref={audioRef} src="./rizz.mp3" preload="none"/>
     </div>
   );
@@ -262,13 +252,12 @@ const GitHubButton =  ({
   className = "",
 }: GitHubButtonProps)=> {
   return (
-    <a
+    <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       className={`group flex items-center border border-zinc-800 rounded-lg overflow-hidden cursor-pointer transition-colors duration-300 hover:border-indigo-500 ${className}`}
     >
-      {/* Icon */}
       <div className="bg-zinc-900 p-2 flex items-center justify-center">
         <svg
           viewBox="0 0 24 24"
@@ -279,20 +268,16 @@ const GitHubButton =  ({
         </svg>
       </div>
 
-      {/* Flip Container */}
       <div className="relative w-20 h-8 transform-3d transition-transform duration-300 group-hover:transform:[rotateX(90deg)]">
         
-        {/* Front */}
         <span className="absolute inset-0 flex items-center justify-center text-xs font-medium text-zinc-400 bg-zinc-900">
           Code
         </span>
-
-        {/* Top (flip) */}
         <span className="absolute inset-0 flex items-center justify-center text-xs font-medium text-white bg-indigo-600 transform:[rotateX(-90deg)_translateY(50%)]">
           GitHub
         </span>
       </div>
-    </a>
+    </Link>
   );
 }
 

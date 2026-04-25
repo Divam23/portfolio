@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const stack = [
   {
     label: "Backend",
@@ -18,14 +20,12 @@ export default function About() {
     <section id="about" className="py-28 scroll-mt-24">
       <div className="max-w-5xl  mx-auto px-6">
 
-        {/* Header */}
         <div className="mb-12">
           <h2 className="text-3xl font-semibold text-white">About</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
 
-          {/* Left — concise profile */}
           <div className="space-y-4">
             <p className="text-neutral-300 text-sm leading-relaxed">
               Backend-focused developer building scalable systems, real-time applications,
@@ -38,16 +38,14 @@ export default function About() {
               job processing, and hybrid database architectures.
             </p>
 
-            {/* CTA */}
-            <a
+            <Link
               href="#contact"
               className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition"
             >
               Contact →
-            </a>
+            </Link>
           </div>
 
-          {/* Right — stack */}
           <div className="space-y-6">
             {stack.map(({ label, items }) => (
               <div key={label}>
@@ -68,7 +66,6 @@ export default function About() {
               </div>
             ))}
 
-            {/* Availability */}
             <p className="text-xs text-neutral-500 mt-4">
               Open to backend engineering opportunities
             </p>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ResumeButton } from "./Button";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,7 +20,6 @@ export default function Navbar() {
 
     const close = ()=> setOpen(false);
 
-    //const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", close);
     return () => window.removeEventListener("scroll", close);
   }, [open]);
@@ -36,35 +36,27 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      {/* Top Bar */}
       <div className="max-w-5xl mx-auto flex items-center justify-between px-6 h-16">
-        {/* Logo */}
-        <a href="#" className="text-lg font-semibold tracking-tight text-white">
+        <Link href="/" className="text-lg font-semibold tracking-tight text-white">
           Divam<span className="text-neutral-600">.</span>
-        </a>
-
-        {/* Desktop Links */}
+        </Link>
         <ul className="hidden md:flex items-center gap-6 text-sm text-neutral-400">
           {links.map((link) => (
             <li key={link.name}>
-              <a href={link.href} className="hover:text-white transition">
+              <Link href={link.href} className="hover:text-white transition">
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-
-        {/* Resume */}
-        <a
+        <Link
           href="/Divam Dubey.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:block"
         >
           <ResumeButton />
-        </a>
-
-        {/* Mobile Button */}
+        </Link>
         <button
           onClick={handleSideMenu}
           className="md:hidden p-2 text-neutral-400 hover:text-white transition"
@@ -104,8 +96,6 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         />
       )}
-
-      {/* Mobile Menu (OUTSIDE flex row) */}
       <div
         className={`
         md:hidden absolute top-16 left-0 w-full bg-neutral-950/95 backdrop-blur-md
@@ -119,25 +109,23 @@ export default function Navbar() {
       >
         <div className="max-w-5xl mx-auto px-6 py-6 flex flex-col gap-4 text-sm text-neutral-400">
           {links.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               onClick={() => setOpen(false)}
               className="hover:text-white transition"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-
-          {/* Resume inside mobile */}
-          <a
+          <Link
             href="/Divam Dubey.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="md:block pt-2"
           >
             <ResumeButton />
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

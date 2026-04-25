@@ -21,15 +21,11 @@ export default function Skills() {
   return (
     <section id="skills" className="py-28">
       <div className="max-w-5xl mx-auto px-6">
-
-        {/* Header */}
         <div className="mb-12">
           <h2 className="text-3xl font-semibold text-white">
             Technical Stack
           </h2>
         </div>
-
-        {/* Skills Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {skills.map(({ label, items }) => (
             <div key={label}>

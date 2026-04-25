@@ -1,4 +1,20 @@
-export const projectDetails = [
+type Project = {
+  title: string;
+  tagline: string;
+  category: string;
+  focus: string[];
+  keyHighlights: string[];
+  architecture: string;
+  technologies: string[];
+  links: {
+    github: string;
+    live: string;
+    caseStudy: string;
+  };
+  learned: string[];
+};
+
+export const projectDetails: Project[] = [
   {
     title: "Food Delivery Backend System",
 
@@ -96,13 +112,7 @@ export const projectDetails = [
     architecture:
       "Flutter App → Firebase (Auth + Firestore) → MongoDB → ML Services",
 
-    technologies: [
-      "Flutter",
-      "Firebase",
-      "Firestore",
-      "MongoDB",
-      "Node.js",
-    ],
+    technologies: ["Flutter", "Firebase", "Firestore", "MongoDB", "Node.js"],
 
     links: {
       github: "",
@@ -125,11 +135,7 @@ export const projectDetails = [
 
     category: "System Design (In Progress)",
 
-    focus: [
-      "Scalable architecture",
-      "Media processing",
-      "Distributed systems",
-    ],
+    focus: ["Scalable architecture", "Media processing", "Distributed systems"],
 
     keyHighlights: [
       "Designed video upload and processing pipeline",
