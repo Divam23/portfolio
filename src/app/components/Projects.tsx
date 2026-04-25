@@ -8,7 +8,7 @@ const projects = () => {
         <h2 className="text-3xl font-bold">Backend Systems</h2>
 
         <div className="mt-12">
-          <ProjectCardFeatured project={projectDetails[1]} />
+          <ProjectCardFeatured project={projectDetails[0]} />
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mt-10">

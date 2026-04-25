@@ -15,41 +15,7 @@ type Project = {
 };
 
 export const projectDetails: Project[] = [
-  {
-    title: "Food Delivery Backend System",
-
-    tagline:
-      "Scalable backend system enabling real-time order tracking and geo-based restaurant discovery",
-
-    category: "Real-time System",
-
-    focus: ["Real-time systems", "Geospatial queries", "API scalability"],
-
-    keyHighlights: [
-      "Implemented WebSocket-based real-time order tracking",
-      "Designed geospatial queries for location-based restaurant filtering",
-      "Built scalable REST APIs with optimized database queries and indexing",
-      "Structured role-based system for customers, restaurant owners, and admins",
-    ],
-
-    architecture: "REST APIs + WebSockets + MongoDB",
-
-    technologies: ["Node.js", "Express", "MongoDB", "WebSockets"],
-
-    links: {
-      github: "",
-      live: "",
-      caseStudy: "/projects/food-delivery",
-    },
-
-    learned: [
-      "Designed real-time systems using WebSockets",
-      "Optimized database queries for performance and scalability",
-      "Handled concurrency in event-driven architectures",
-    ],
-  },
-
-  {
+    {
     title: "Background Worker & Job Queue System",
 
     tagline:
@@ -85,6 +51,40 @@ export const projectDetails: Project[] = [
       "Designed asynchronous and event-driven systems",
       "Handled job retries, failures, and idempotency",
       "Used Docker for containerized and scalable deployments",
+    ],
+  },
+
+  {
+    title: "Food Delivery Backend System",
+
+    tagline:
+      "Scalable backend system enabling real-time order tracking and geo-based restaurant discovery",
+
+    category: "Real-time System (In Progress)",
+
+    focus: ["Real-time systems", "Geospatial queries", "API scalability"],
+
+    keyHighlights: [
+      "Implemented WebSocket-based real-time order tracking",
+      "Designed geospatial queries for location-based restaurant filtering",
+      "Built scalable REST APIs with optimized database queries and indexing",
+      "Structured role-based system for customers, restaurant owners, and admins",
+    ],
+
+    architecture: "REST APIs + WebSockets + MongoDB",
+
+    technologies: ["Node.js", "Express", "MongoDB", "WebSockets"],
+
+    links: {
+      github: "",
+      live: "",
+      caseStudy: "/projects/food-delivery",
+    },
+
+    learned: [
+      "Designed real-time systems using WebSockets",
+      "Optimized database queries for performance and scalability",
+      "Handled concurrency in event-driven architectures",
     ],
   },
 
