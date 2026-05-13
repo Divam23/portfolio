@@ -6,6 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import { Particles } from "../components/ui/particles";
 import FadeIn from "@/app/components/FramerMotion";
+import { Analytics } from '@vercel/analytics/next';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Skills />
       <About />
       <Contact />
+      <Analytics/>
     </main>
   );
 }
