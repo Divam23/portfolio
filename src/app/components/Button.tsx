@@ -236,7 +236,7 @@ const CopyButton: React.FC<Props> = ({ textToCopy }) => {
         </span>
       </button>
 
-      <audio ref={audioRef} src="./rizz.mp3" preload="none"/>
+      <audio ref={audioRef} src="./enter.mp3" preload="auto"/>
     </div>
   );
 };

@@ -15,7 +15,46 @@ type Project = {
 };
 
 export const projectDetails: Project[] = [
-    {
+  {
+    title: "ClustraNotes — Scalable Content Distribution System",
+
+    tagline:
+      "Hybrid backend system for managing, ranking, and distributing academic notes with real-time engagement",
+
+    category: "Data-Intensive System (In Progress)",
+
+    focus: ["Hybrid architecture", "Real-time systems"],
+
+    keyHighlights: [
+      "Designed hybrid architecture using Firebase (real-time) and MongoDB (analytics)",
+      "Built engagement system with likes, bookmarks, and interaction tracking",
+      "Structured data model for ranking and recommendation systems",
+      "Integrated mobile frontend using Flutter with backend services",
+    ],
+
+    architecture: "Flutter App → Firebase (Auth + Firestore) → MongoDB",
+
+    technologies: [
+      "Flutter",
+      "Firebase",
+      "Firestore",
+      "MongoDB",
+      "Node.js",
+      "Redis",
+    ],
+
+    links: {
+      github: "https://github.com/Divam23/clustranotes-server",
+      live: "",
+      caseStudy: "/projects/notex",
+    },
+
+    learned: [
+      "Designed hybrid database architectures for different workloads",
+      "Handled real-time data synchronization across services",
+    ],
+  },
+  {
     title: "Background Worker & Job Queue System",
 
     tagline:
@@ -42,7 +81,7 @@ export const projectDetails: Project[] = [
     technologies: ["Node.js", "BullMQ/Queue", "Redis", "Docker"],
 
     links: {
-      github: "",
+      github: "https://github.com/Divam23/job-queue-system",
       live: "",
       caseStudy: "/projects/job-queue",
     },
@@ -85,85 +124,6 @@ export const projectDetails: Project[] = [
       "Designed real-time systems using WebSockets",
       "Optimized database queries for performance and scalability",
       "Handled concurrency in event-driven architectures",
-    ],
-  },
-
-  {
-    title: "NoteX — Scalable Content Distribution System",
-
-    tagline:
-      "Hybrid backend system for managing, ranking, and distributing academic notes with real-time engagement",
-
-    category: "Data-Intensive System (In Progress)",
-
-    focus: [
-      "Hybrid architecture",
-      "Real-time systems",
-      "ML-ready data pipelines",
-    ],
-
-    keyHighlights: [
-      "Designed hybrid architecture using Firebase (real-time) and MongoDB (analytics)",
-      "Built engagement system with likes, bookmarks, and interaction tracking",
-      "Structured data model for ranking and recommendation systems",
-      "Integrated mobile frontend using Flutter with backend services",
-    ],
-
-    architecture:
-      "Flutter App → Firebase (Auth + Firestore) → MongoDB → ML Services",
-
-    technologies: ["Flutter", "Firebase", "Firestore", "MongoDB", "Node.js"],
-
-    links: {
-      github: "",
-      live: "",
-      caseStudy: "/projects/notex",
-    },
-
-    learned: [
-      "Designed hybrid database architectures for different workloads",
-      "Structured systems for ML integration and analytics",
-      "Handled real-time data synchronization across services",
-    ],
-  },
-
-  {
-    title: "YouTube Backend Architecture",
-
-    tagline:
-      "Scalable backend system design inspired by YouTube, focusing on video processing and content delivery",
-
-    category: "System Design (In Progress)",
-
-    focus: ["Scalable architecture", "Media processing", "Distributed systems"],
-
-    keyHighlights: [
-      "Designed video upload and processing pipeline",
-      "Planned distributed storage and content delivery mechanisms",
-      "Structured backend for handling high concurrency and large media files",
-      "Explored system design patterns for large-scale applications",
-    ],
-
-    architecture:
-      "Client → API → Storage (Video) → Processing Pipeline → CDN Delivery",
-
-    technologies: [
-      "Node.js",
-      "Cloud Storage",
-      "Streaming concepts",
-      "System Design",
-    ],
-
-    links: {
-      github: "",
-      live: "",
-      caseStudy: "/projects/youtube-backend",
-    },
-
-    learned: [
-      "Understood large-scale system design principles",
-      "Designed media processing workflows",
-      "Explored trade-offs in scalability and storage systems",
     ],
   },
 ];
