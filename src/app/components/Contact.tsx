@@ -111,7 +111,7 @@ export default function Contact() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="text-lg w-1/2 text-zinc-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 font-medium border border-zinc-700 p-3 rounded-xl outline-none"
+                className="lg:text-lg md:text-lg lg:w-1/2 md:w-1/2 text-zinc-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 font-medium border border-zinc-700 p-3 rounded-xl outline-none"
               />
               <input
                 type="email"
@@ -120,16 +120,17 @@ export default function Contact() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="text-lg w-1/2 text-zinc-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 font-medium border border-zinc-700 p-3 rounded-xl outline-none"
+                className="lg:text-lg md:text-lg lg:w-1/2 md:w-1/2 text-zinc-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 font-medium border border-zinc-700 p-3 rounded-xl outline-none"
               />
               <textarea
                 id="description"
                 placeholder="Any comments or details regarding project..."
                 required
                 rows={4}
+                cols={24}
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="text-lg w-1/2 text-zinc-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 font-medium border border-zinc-700 p-3 rounded-xl outline-none resize-none scrollbar-none"
+                className="lg:text-lg md:text-lg lg:w-1/2 md:w-1/2 text-zinc-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 font-medium border border-zinc-700 p-3 rounded-xl outline-none resize-none scrollbar-none"
               />
               <div className="flex gap-3">
                 <button
