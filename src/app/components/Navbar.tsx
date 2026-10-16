@@ -119,7 +119,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/Divam Dubey.pdf"
+            href="/DivamDubey.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="md:block pt-2"
