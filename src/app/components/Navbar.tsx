@@ -50,7 +50,7 @@ export default function Navbar() {
           ))}
         </ul>
         <Link
-          href="/Divam Dubey.pdf"
+          href="/DivamDubey.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:block"
